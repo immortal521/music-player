@@ -65,7 +65,7 @@ fn prompt_for_music_database_path() -> Result<String, ExitFailure> {
 
 pub fn init() -> Result<InitConfig, ExitFailure> {
     let config_path = dirs::home_dir()
-        .map(|home| home.join(".config").join("music_player").join("config.yml"))
+        .map(|home| home.join(".config").join("music-player").join("config.yml"))
         .ok_or_else(|| ExitFailure::from(err_msg("Home directory not found")))?;
 
     let config_dir = config_path.parent().unwrap(); // 获取目录路径
